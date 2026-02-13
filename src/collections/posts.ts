@@ -1,5 +1,5 @@
-import { FramerField, BlogPost, ICMSProvider } from '@/types/index.js';
-import { BaseFramerService } from '@/services/framer.js';
+import { FramerField, BlogPost, ICMSProvider } from '../types/index.js';
+import { BaseFramerService } from '../services/framer.js';
 
 export const postsMapFields: FramerField[] = [
   { id: 'title', framerId: 'EpmfAEFoo', type: 'string' },

@@ -1,6 +1,6 @@
-import { GroqService } from '@/services/groq.js';
-import { FramerPostsProvider } from '@/collections/posts.js';
-import { BlogSyncService } from '@/services/sync.js';
+import { GroqService } from '../src/services/groq.js';
+import { FramerPostsProvider } from '../src/collections/posts.js';
+import { BlogSyncService } from '../src/services/sync.js';
 import * as dotenv from 'dotenv';
 
 dotenv.config();

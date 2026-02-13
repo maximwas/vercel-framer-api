@@ -1,8 +1,8 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { GroqService } from '@/services/groq.js';
-import { FramerPostsProvider } from '@/collections/posts.js';
-import { BlogSyncService } from '@/services/sync.js';
-import { getEnvConfig } from '@/config/env.js';
+import { GroqService } from '../src/services/groq.js';
+import { FramerPostsProvider } from '../src/collections/posts.js';
+import { BlogSyncService } from '../src/services/sync.js';
+import { getEnvConfig } from '../src/config/env.js';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log('[Cron] Received trigger request');
