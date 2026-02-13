@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc && tsc-alias",
-    "vercel-build": "npm run build",
     "dev": "tsx api/cron.ts",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write ."
