@@ -1,6 +1,6 @@
 import Groq from 'groq-sdk';
-import { BlogPost, IAIProvider } from '../types';
-import { getEnvConfig } from '../config/env';
+import { BlogPost, IAIProvider } from '@/types/index.js';
+import { getEnvConfig } from '@/config/env.js';
 
 export class GroqService implements IAIProvider {
   private client: Groq;

@@ -1,6 +1,6 @@
 import { connect, FieldDataInput } from 'framer-api';
-import { getEnvConfig } from '../config/env';
-import { FramerField } from '../types';
+import { getEnvConfig } from '@/config/env.js';
+import { FramerField } from '@/types/index.js';
 
 export abstract class BaseFramerService {
   protected async connect() {

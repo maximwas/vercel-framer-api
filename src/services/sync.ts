@@ -1,4 +1,4 @@
-import { IAIProvider, ICMSProvider, SyncResult } from '../types';
+import { IAIProvider, ICMSProvider, SyncResult } from '@/types/index.js';
 
 export class BlogSyncService {
   constructor(

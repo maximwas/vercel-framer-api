@@ -1,4 +1,4 @@
-import { EnvConfig } from '../types';
+import { EnvConfig } from '@/types/index.js';
 
 export const getEnvConfig = (): EnvConfig => {
   const { GROQ_API_KEY, FRAMER_API_KEY, EXAMPLE_PROJECT_URL, CRON_SECRET } = process.env;

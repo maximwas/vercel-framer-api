@@ -1,5 +1,5 @@
-import { FramerField, BlogPost, ICMSProvider } from '../types';
-import { BaseFramerService } from '../services/framer';
+import { FramerField, BlogPost, ICMSProvider } from '@/types/index.js';
+import { BaseFramerService } from '@/services/framer.js';
 
 export const postsMapFields: FramerField[] = [
   { id: 'title', framerId: 'EpmfAEFoo', type: 'string' },
@@ -20,7 +20,7 @@ export class FramerPostsProvider extends BaseFramerService implements ICMSProvid
     try {
       const collections = await framer.getCollections();
       const collection = collections.find(
-        (collection) => collection.name.toLowerCase() === collectionSlug
+        (collection: any) => collection.name.toLowerCase() === collectionSlug
       );
 
       if (!collection) {
