@@ -16,15 +16,14 @@ This project is a Vercel serverless function setup with Google Gemini AI integra
         ```
     - Open `.env` and paste your Google Gemini API Key.
 
-3.  **Local Testing**:
-    - You can test functionality with the included script:
-        ```bash
-        npx ts-node test-gemini.ts
-        ```
-    - Or run the Vercel dev server (requires Vercel CLI):
-        ```bash
-        vercel dev
-        ```
+3.  **Get API Key**:
+    - Go to [Google AI Studio](https://aistudio.google.com/app/apikey).
+    - Create a new API key.
+
+4.  **Local Testing**:
+    - For details, see [TESTING.md](TESTING.md).
+    - Quick test: `npx ts-node test-gemini.ts`
+    - Full server: `vercel dev`
 
 ## Deployment
 
@@ -37,3 +36,14 @@ This project is a Vercel serverless function setup with Google Gemini AI integra
 
 -   `GET /api` or `POST /api`: Generates content. Accepts a `prompt` query parameter or JSON body.
 -   `GET /api/cron`: The cron job handler (runs daily by default).
+
+## GitHub Actions Deployment
+
+If you prefer to deploy using GitHub Actions:
+
+1.  **Get Vercel Credentials**:
+    -   `VERCEL_TOKEN`: Account Settings > Tokens.
+    -   `VERCEL_ORG_ID` & `VERCEL_PROJECT_ID`: Run `vc link` locally or check `.vercel/project.json` (after linking).
+2.  **Add Secrets to GitHub**:
+    -   Go to your repository Settings > Secrets > Actions.
+    -   Add `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`.

@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug TS Node",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "runtimeExecutable": "npx", 
+      "runtimeArgs": ["ts-node", "--files"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "sourceMaps": true,
+      "outFiles": ["${workspaceFolder}/**/*.ts"]
+    },
+    {
+      "name": "Run Local Sync",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/run-local.ts",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
