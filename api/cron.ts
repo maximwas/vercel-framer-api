@@ -10,7 +10,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const config = getEnvConfig();
   const authHeader = req.headers.authorization;
   
-  if (config.VERCEL_CRON_SECRET && authHeader !== `Bearer ${config.VERCEL_CRON_SECRET}`) {
+  if (config.CRON_SECRET && authHeader !== `Bearer ${config.CRON_SECRET}`) {
     console.error('[Cron] Unauthorized request');
     return res.status(401).json({ error: 'Unauthorized' });
   }

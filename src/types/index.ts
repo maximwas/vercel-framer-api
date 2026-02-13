@@ -24,7 +24,7 @@ export interface EnvConfig {
   GROQ_API_KEY: string;
   FRAMER_API_KEY: string;
   EXAMPLE_PROJECT_URL: string;
-  VERCEL_CRON_SECRET?: string;
+  CRON_SECRET?: string;
 }
 
 export interface IAIProvider {
