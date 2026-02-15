@@ -32,7 +32,7 @@ export abstract class BaseFramerService {
 
       console.log(`[Framer] Published! Deployment ID: ${result.deployment.id}`);
 
-      await (new Promise(resolve => setTimeout(resolve, 5000)));
+      await new Promise(resolve => setTimeout(resolve, 5000));
 
       await framer.deploy(result.deployment.id)
 
