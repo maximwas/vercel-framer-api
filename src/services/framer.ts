@@ -28,6 +28,8 @@ export abstract class BaseFramerService {
     try {
       console.log('[Framer] Publishing project...');
 
+      await new Promise(resolve => setTimeout(resolve, 5000));
+
       const result = await framer.publish();
 
       console.log(`[Framer] Published! Deployment ID: ${result.deployment.id}`);
