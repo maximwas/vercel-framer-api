@@ -20,7 +20,7 @@ export class FramerPostsProvider extends BaseFramerService implements ICMSProvid
     try {
       const collections = await framer.getCollections();
       const collection = collections.find(
-        (collection: any) => collection.name.toLowerCase() === collectionSlug
+        (collection) => collection.name.toLowerCase() === collectionSlug
       );
 
       if (!collection) {
